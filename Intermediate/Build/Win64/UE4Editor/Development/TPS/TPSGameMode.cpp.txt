@@ -1,0 +1,17 @@
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Source\TPS\TPSGameMode.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\TPSGameMode.generated.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Source\TPS\TPSPlayerController.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\TPSPlayerController.generated.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Source\TPS\TPSCharacter.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\TPSCharacter.generated.h

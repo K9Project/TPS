@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "TPS",
+			"Path": "C:\\Users\\N007va\\Documents\\Unreal Projects\\Practic Works\\TPS\\Source\\TPS.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TPSEditor",
+			"Path": "C:\\Users\\N007va\\Documents\\Unreal Projects\\Practic Works\\TPS\\Source\\TPSEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
