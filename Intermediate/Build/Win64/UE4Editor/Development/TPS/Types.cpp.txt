@@ -1,0 +1,4 @@
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Source\TPS\Types.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\Types.generated.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Source\TPS\TPS.h

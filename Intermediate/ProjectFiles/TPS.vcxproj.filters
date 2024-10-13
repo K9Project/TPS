@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TPS.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{974684E1-B8A9-4055-AEE9-B1CFC134268C}</UniqueIdentifier>
+      <UniqueIdentifier>{4545F9EC-E167-42EF-A512-1BA31D28B756}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TPS.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\TPSEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{6A03C547-0F4F-43BD-B052-5D65CE3B1078}</UniqueIdentifier>
+      <UniqueIdentifier>{62649688-C601-4976-BE49-3DDA282E49FE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TPS">
-      <UniqueIdentifier>{7DC1710D-AED7-48A1-9BDA-42AF074BA5E3}</UniqueIdentifier>
+      <UniqueIdentifier>{E8B1E1C2-7054-4514-BC0B-73CAA6C52050}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TPS\TPS.Build.cs">
       <Filter>Source\TPS</Filter>
@@ -57,6 +59,12 @@
       <Filter>Source\TPS</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TPS\TPSPlayerController.h">
+      <Filter>Source\TPS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TPS\Types.cpp">
+      <Filter>Source\TPS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TPS\Types.h">
       <Filter>Source\TPS</Filter>
     </ClInclude>
   </ItemGroup>

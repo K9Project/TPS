@@ -14,8 +14,20 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TPS_TPSCharacter_generated_h
 
 #define TPS_Source_TPS_TPSCharacter_h_12_SPARSE_DATA
-#define TPS_Source_TPS_TPSCharacter_h_12_RPC_WRAPPERS
-#define TPS_Source_TPS_TPSCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define TPS_Source_TPS_TPSCharacter_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execMovementTick); \
+	DECLARE_FUNCTION(execInputAxisX); \
+	DECLARE_FUNCTION(execInputAxisY);
+
+
+#define TPS_Source_TPS_TPSCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execMovementTick); \
+	DECLARE_FUNCTION(execInputAxisX); \
+	DECLARE_FUNCTION(execInputAxisY);
+
+
 #define TPS_Source_TPS_TPSCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATPSCharacter(); \
