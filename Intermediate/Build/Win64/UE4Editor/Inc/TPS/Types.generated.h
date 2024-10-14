@@ -13,17 +13,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TPS_Types_generated_h
 
-#define TPS_Source_TPS_Types_h_19_GENERATED_BODY \
+#define TPS_Source_TPS_Types_h_21_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCharacterSpeed_Statics; \
 	TPS_API static class UScriptStruct* StaticStruct();
 
 
 template<> TPS_API UScriptStruct* StaticStruct<struct FCharacterSpeed>();
 
-#define TPS_Source_TPS_Types_h_32_SPARSE_DATA
-#define TPS_Source_TPS_Types_h_32_RPC_WRAPPERS
-#define TPS_Source_TPS_Types_h_32_RPC_WRAPPERS_NO_PURE_DECLS
-#define TPS_Source_TPS_Types_h_32_INCLASS_NO_PURE_DECLS \
+#define TPS_Source_TPS_Types_h_38_SPARSE_DATA
+#define TPS_Source_TPS_Types_h_38_RPC_WRAPPERS
+#define TPS_Source_TPS_Types_h_38_RPC_WRAPPERS_NO_PURE_DECLS
+#define TPS_Source_TPS_Types_h_38_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUTypes(); \
 	friend struct Z_Construct_UClass_UTypes_Statics; \
@@ -32,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(UTypes)
 
 
-#define TPS_Source_TPS_Types_h_32_INCLASS \
+#define TPS_Source_TPS_Types_h_38_INCLASS \
 private: \
 	static void StaticRegisterNativesUTypes(); \
 	friend struct Z_Construct_UClass_UTypes_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(UTypes)
 
 
-#define TPS_Source_TPS_Types_h_32_STANDARD_CONSTRUCTORS \
+#define TPS_Source_TPS_Types_h_38_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UTypes(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UTypes) \
@@ -54,7 +54,7 @@ private: \
 public:
 
 
-#define TPS_Source_TPS_Types_h_32_ENHANCED_CONSTRUCTORS \
+#define TPS_Source_TPS_Types_h_38_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UTypes(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -67,28 +67,28 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UTypes)
 
 
-#define TPS_Source_TPS_Types_h_32_PRIVATE_PROPERTY_OFFSET
-#define TPS_Source_TPS_Types_h_29_PROLOG
-#define TPS_Source_TPS_Types_h_32_GENERATED_BODY_LEGACY \
+#define TPS_Source_TPS_Types_h_38_PRIVATE_PROPERTY_OFFSET
+#define TPS_Source_TPS_Types_h_35_PROLOG
+#define TPS_Source_TPS_Types_h_38_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_Types_h_32_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_Types_h_32_SPARSE_DATA \
-	TPS_Source_TPS_Types_h_32_RPC_WRAPPERS \
-	TPS_Source_TPS_Types_h_32_INCLASS \
-	TPS_Source_TPS_Types_h_32_STANDARD_CONSTRUCTORS \
+	TPS_Source_TPS_Types_h_38_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_Types_h_38_SPARSE_DATA \
+	TPS_Source_TPS_Types_h_38_RPC_WRAPPERS \
+	TPS_Source_TPS_Types_h_38_INCLASS \
+	TPS_Source_TPS_Types_h_38_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TPS_Source_TPS_Types_h_32_GENERATED_BODY \
+#define TPS_Source_TPS_Types_h_38_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_Types_h_32_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_Types_h_32_SPARSE_DATA \
-	TPS_Source_TPS_Types_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
-	TPS_Source_TPS_Types_h_32_INCLASS_NO_PURE_DECLS \
-	TPS_Source_TPS_Types_h_32_ENHANCED_CONSTRUCTORS \
+	TPS_Source_TPS_Types_h_38_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_Types_h_38_SPARSE_DATA \
+	TPS_Source_TPS_Types_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+	TPS_Source_TPS_Types_h_38_INCLASS_NO_PURE_DECLS \
+	TPS_Source_TPS_Types_h_38_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -101,8 +101,10 @@ template<> TPS_API UClass* StaticClass<class UTypes>();
 
 #define FOREACH_ENUM_EMOVEMENTSTATE(op) \
 	op(EMovementState::Aim_State) \
+	op(EMovementState::AimWalk_State) \
 	op(EMovementState::Walk_State) \
-	op(EMovementState::Run_State) 
+	op(EMovementState::Run_State) \
+	op(EMovementState::SprintRun_State) 
 
 enum class EMovementState : uint8;
 template<> TPS_API UEnum* StaticEnum<EMovementState>();

@@ -34,7 +34,7 @@ void EmptyLinkFunctionForGeneratedCodeTypes() {}
 		return EMovementState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EMovementState(EMovementState_StaticEnum, TEXT("/Script/TPS"), TEXT("EMovementState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_TPS_EMovementState_Hash() { return 1825024434U; }
+	uint32 Get_Z_Construct_UEnum_TPS_EMovementState_Hash() { return 2430035360U; }
 	UEnum* Z_Construct_UEnum_TPS_EMovementState()
 	{
 #if WITH_HOT_RELOAD
@@ -47,17 +47,23 @@ void EmptyLinkFunctionForGeneratedCodeTypes() {}
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "EMovementState::Aim_State", (int64)EMovementState::Aim_State },
+				{ "EMovementState::AimWalk_State", (int64)EMovementState::AimWalk_State },
 				{ "EMovementState::Walk_State", (int64)EMovementState::Walk_State },
 				{ "EMovementState::Run_State", (int64)EMovementState::Run_State },
+				{ "EMovementState::SprintRun_State", (int64)EMovementState::SprintRun_State },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Aim_State.DisplayName", "Aim State" },
 				{ "Aim_State.Name", "EMovementState::Aim_State" },
+				{ "AimWalk_State.DisplayName", "AimWalk State" },
+				{ "AimWalk_State.Name", "EMovementState::AimWalk_State" },
 				{ "BlueprintType", "true" },
 				{ "ModuleRelativePath", "Types.h" },
 				{ "Run_State.DisplayName", "Run State" },
 				{ "Run_State.Name", "EMovementState::Run_State" },
+				{ "SprintRun_State.DisplayName", "SprintRun State" },
+				{ "SprintRun_State.Name", "EMovementState::SprintRun_State" },
 				{ "Walk_State.DisplayName", "Walk State" },
 				{ "Walk_State.Name", "EMovementState::Walk_State" },
 			};
@@ -108,17 +114,25 @@ static struct FScriptStruct_TPS_StaticRegisterNativesFCharacterSpeed
 #endif
 		static void* NewStructOps();
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AimSpeed_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AimSpeedNormal_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimSpeed;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimSpeedNormal;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WalkSpeed_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WalkSpeedNormal_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_WalkSpeedNormal;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RunSpeed_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RunSpeedNormal_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RunSpeedNormal;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AimSpeedWalk_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimSpeedWalk;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SprintRunSpeedRun_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SprintRunSpeedRun;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -133,30 +147,46 @@ static struct FScriptStruct_TPS_StaticRegisterNativesFCharacterSpeed
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FCharacterSpeed>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedNormal_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Types.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeed = { "AimSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, AimSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedNormal = { "AimSpeedNormal", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, AimSpeedNormal), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedNormal_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedNormal_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeedNormal_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Types.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, WalkSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeedNormal = { "WalkSpeedNormal", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, WalkSpeedNormal), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeedNormal_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeedNormal_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeed_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeedNormal_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Types.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeed = { "RunSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, RunSpeed), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeed_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeedNormal = { "RunSpeedNormal", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, RunSpeedNormal), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeedNormal_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeedNormal_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedWalk_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedWalk = { "AimSpeedWalk", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, AimSpeedWalk), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedWalk_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedWalk_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_SprintRunSpeedRun_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_SprintRunSpeedRun = { "SprintRunSpeedRun", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FCharacterSpeed, SprintRunSpeedRun), METADATA_PARAMS(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_SprintRunSpeedRun_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_SprintRunSpeedRun_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FCharacterSpeed_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedNormal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_WalkSpeedNormal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_RunSpeedNormal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_AimSpeedWalk,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FCharacterSpeed_Statics::NewProp_SprintRunSpeedRun,
 	};
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FCharacterSpeed_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_TPS,
@@ -186,7 +216,7 @@ static struct FScriptStruct_TPS_StaticRegisterNativesFCharacterSpeed
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FCharacterSpeed_Hash() { return 1106153866U; }
+	uint32 Get_Z_Construct_UScriptStruct_FCharacterSpeed_Hash() { return 2478378709U; }
 	void UTypes::StaticRegisterNativesUTypes()
 	{
 	}

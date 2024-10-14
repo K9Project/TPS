@@ -20,7 +20,23 @@ void EmptyLinkFunctionForGeneratedCodeTPSCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UDecalComponent_NoRegister();
+	TPS_API UEnum* Z_Construct_UEnum_TPS_EMovementState();
+	TPS_API UScriptStruct* Z_Construct_UScriptStruct_FCharacterSpeed();
 // End Cross Module References
+	DEFINE_FUNCTION(ATPSCharacter::execChangeMovementState)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ChangeMovementState();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ATPSCharacter::execCharacterUpdate)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->CharacterUpdate();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATPSCharacter::execMovementTick)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_DeltaTime);
@@ -49,11 +65,57 @@ void EmptyLinkFunctionForGeneratedCodeTPSCharacter() {}
 	{
 		UClass* Class = ATPSCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "ChangeMovementState", &ATPSCharacter::execChangeMovementState },
+			{ "CharacterUpdate", &ATPSCharacter::execCharacterUpdate },
 			{ "InputAxisX", &ATPSCharacter::execInputAxisX },
 			{ "InputAxisY", &ATPSCharacter::execInputAxisY },
 			{ "MovementTick", &ATPSCharacter::execMovementTick },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATPSCharacter_ChangeMovementState_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATPSCharacter_ChangeMovementState_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATPSCharacter_ChangeMovementState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATPSCharacter, nullptr, "ChangeMovementState", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATPSCharacter_ChangeMovementState_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATPSCharacter_ChangeMovementState_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATPSCharacter_ChangeMovementState()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATPSCharacter_ChangeMovementState_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATPSCharacter_CharacterUpdate_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATPSCharacter_CharacterUpdate_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATPSCharacter_CharacterUpdate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATPSCharacter, nullptr, "CharacterUpdate", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATPSCharacter_CharacterUpdate_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATPSCharacter_CharacterUpdate_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATPSCharacter_CharacterUpdate()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATPSCharacter_CharacterUpdate_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ATPSCharacter_InputAxisX_Statics
 	{
@@ -176,6 +238,30 @@ void EmptyLinkFunctionForGeneratedCodeTPSCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CursorToWorld_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CursorToWorld;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_MovementState_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementState_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_MovementState;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementSpeedInfo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MovementSpeedInfo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SprintRunEnabled_MetaData[];
+#endif
+		static void NewProp_SprintRunEnabled_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_SprintRunEnabled;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WalkEnabled_MetaData[];
+#endif
+		static void NewProp_WalkEnabled_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_WalkEnabled;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AimEnabled_MetaData[];
+#endif
+		static void NewProp_AimEnabled_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_AimEnabled;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -185,6 +271,8 @@ void EmptyLinkFunctionForGeneratedCodeTPSCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TPS,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATPSCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATPSCharacter_ChangeMovementState, "ChangeMovementState" }, // 2037745253
+		{ &Z_Construct_UFunction_ATPSCharacter_CharacterUpdate, "CharacterUpdate" }, // 273478313
 		{ &Z_Construct_UFunction_ATPSCharacter_InputAxisX, "InputAxisX" }, // 774155260
 		{ &Z_Construct_UFunction_ATPSCharacter_InputAxisY, "InputAxisY" }, // 1234089689
 		{ &Z_Construct_UFunction_ATPSCharacter_MovementTick, "MovementTick" }, // 3350724820
@@ -231,10 +319,64 @@ void EmptyLinkFunctionForGeneratedCodeTPSCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATPSCharacter_Statics::NewProp_CursorToWorld = { "CursorToWorld", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATPSCharacter, CursorToWorld), Z_Construct_UClass_UDecalComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_CursorToWorld_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_CursorToWorld_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementState_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "TPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementState = { "MovementState", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATPSCharacter, MovementState), Z_Construct_UEnum_TPS_EMovementState, METADATA_PARAMS(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementState_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementSpeedInfo_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "TPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementSpeedInfo = { "MovementSpeedInfo", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATPSCharacter, MovementSpeedInfo), Z_Construct_UScriptStruct_FCharacterSpeed, METADATA_PARAMS(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementSpeedInfo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementSpeedInfo_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATPSCharacter_Statics::NewProp_SprintRunEnabled_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "TPSCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_ATPSCharacter_Statics::NewProp_SprintRunEnabled_SetBit(void* Obj)
+	{
+		((ATPSCharacter*)Obj)->SprintRunEnabled = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATPSCharacter_Statics::NewProp_SprintRunEnabled = { "SprintRunEnabled", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATPSCharacter), &Z_Construct_UClass_ATPSCharacter_Statics::NewProp_SprintRunEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_SprintRunEnabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_SprintRunEnabled_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATPSCharacter_Statics::NewProp_WalkEnabled_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "TPSCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_ATPSCharacter_Statics::NewProp_WalkEnabled_SetBit(void* Obj)
+	{
+		((ATPSCharacter*)Obj)->WalkEnabled = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATPSCharacter_Statics::NewProp_WalkEnabled = { "WalkEnabled", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATPSCharacter), &Z_Construct_UClass_ATPSCharacter_Statics::NewProp_WalkEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_WalkEnabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_WalkEnabled_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATPSCharacter_Statics::NewProp_AimEnabled_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "TPSCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_ATPSCharacter_Statics::NewProp_AimEnabled_SetBit(void* Obj)
+	{
+		((ATPSCharacter*)Obj)->AimEnabled = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATPSCharacter_Statics::NewProp_AimEnabled = { "AimEnabled", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATPSCharacter), &Z_Construct_UClass_ATPSCharacter_Statics::NewProp_AimEnabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_AimEnabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATPSCharacter_Statics::NewProp_AimEnabled_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATPSCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_TopDownCameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_CursorToWorld,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementState_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementState,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_MovementSpeedInfo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_SprintRunEnabled,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_WalkEnabled,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATPSCharacter_Statics::NewProp_AimEnabled,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATPSCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATPSCharacter>::IsAbstract,
@@ -263,7 +405,7 @@ void EmptyLinkFunctionForGeneratedCodeTPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATPSCharacter, 4097738310);
+	IMPLEMENT_CLASS(ATPSCharacter, 4183514832);
 	template<> TPS_API UClass* StaticClass<ATPSCharacter>()
 	{
 		return ATPSCharacter::StaticClass();
