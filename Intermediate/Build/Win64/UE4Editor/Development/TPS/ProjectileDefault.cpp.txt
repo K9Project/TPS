@@ -1,0 +1,3 @@
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Source\TPS\ProjectileDefault.h
+C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\ProjectileDefault.generated.h

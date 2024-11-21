@@ -13,6 +13,20 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TPS_Types_generated_h
 
+#define TPS_Source_TPS_Types_h_48_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FWeaponInfo_Statics; \
+	TPS_API static class UScriptStruct* StaticStruct();
+
+
+template<> TPS_API UScriptStruct* StaticStruct<struct FWeaponInfo>();
+
+#define TPS_Source_TPS_Types_h_38_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FProjectileInfo_Statics; \
+	TPS_API static class UScriptStruct* StaticStruct();
+
+
+template<> TPS_API UScriptStruct* StaticStruct<struct FProjectileInfo>();
+
 #define TPS_Source_TPS_Types_h_21_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCharacterSpeed_Statics; \
 	TPS_API static class UScriptStruct* StaticStruct();
@@ -20,10 +34,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> TPS_API UScriptStruct* StaticStruct<struct FCharacterSpeed>();
 
-#define TPS_Source_TPS_Types_h_38_SPARSE_DATA
-#define TPS_Source_TPS_Types_h_38_RPC_WRAPPERS
-#define TPS_Source_TPS_Types_h_38_RPC_WRAPPERS_NO_PURE_DECLS
-#define TPS_Source_TPS_Types_h_38_INCLASS_NO_PURE_DECLS \
+#define TPS_Source_TPS_Types_h_60_SPARSE_DATA
+#define TPS_Source_TPS_Types_h_60_RPC_WRAPPERS
+#define TPS_Source_TPS_Types_h_60_RPC_WRAPPERS_NO_PURE_DECLS
+#define TPS_Source_TPS_Types_h_60_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUTypes(); \
 	friend struct Z_Construct_UClass_UTypes_Statics; \
@@ -32,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(UTypes)
 
 
-#define TPS_Source_TPS_Types_h_38_INCLASS \
+#define TPS_Source_TPS_Types_h_60_INCLASS \
 private: \
 	static void StaticRegisterNativesUTypes(); \
 	friend struct Z_Construct_UClass_UTypes_Statics; \
@@ -41,7 +55,7 @@ public: \
 	DECLARE_SERIALIZER(UTypes)
 
 
-#define TPS_Source_TPS_Types_h_38_STANDARD_CONSTRUCTORS \
+#define TPS_Source_TPS_Types_h_60_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UTypes(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UTypes) \
@@ -54,7 +68,7 @@ private: \
 public:
 
 
-#define TPS_Source_TPS_Types_h_38_ENHANCED_CONSTRUCTORS \
+#define TPS_Source_TPS_Types_h_60_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UTypes(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -67,28 +81,28 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UTypes)
 
 
-#define TPS_Source_TPS_Types_h_38_PRIVATE_PROPERTY_OFFSET
-#define TPS_Source_TPS_Types_h_35_PROLOG
-#define TPS_Source_TPS_Types_h_38_GENERATED_BODY_LEGACY \
+#define TPS_Source_TPS_Types_h_60_PRIVATE_PROPERTY_OFFSET
+#define TPS_Source_TPS_Types_h_57_PROLOG
+#define TPS_Source_TPS_Types_h_60_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_Types_h_38_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_Types_h_38_SPARSE_DATA \
-	TPS_Source_TPS_Types_h_38_RPC_WRAPPERS \
-	TPS_Source_TPS_Types_h_38_INCLASS \
-	TPS_Source_TPS_Types_h_38_STANDARD_CONSTRUCTORS \
+	TPS_Source_TPS_Types_h_60_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_Types_h_60_SPARSE_DATA \
+	TPS_Source_TPS_Types_h_60_RPC_WRAPPERS \
+	TPS_Source_TPS_Types_h_60_INCLASS \
+	TPS_Source_TPS_Types_h_60_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TPS_Source_TPS_Types_h_38_GENERATED_BODY \
+#define TPS_Source_TPS_Types_h_60_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_Types_h_38_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_Types_h_38_SPARSE_DATA \
-	TPS_Source_TPS_Types_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
-	TPS_Source_TPS_Types_h_38_INCLASS_NO_PURE_DECLS \
-	TPS_Source_TPS_Types_h_38_ENHANCED_CONSTRUCTORS \
+	TPS_Source_TPS_Types_h_60_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_Types_h_60_SPARSE_DATA \
+	TPS_Source_TPS_Types_h_60_RPC_WRAPPERS_NO_PURE_DECLS \
+	TPS_Source_TPS_Types_h_60_INCLASS_NO_PURE_DECLS \
+	TPS_Source_TPS_Types_h_60_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

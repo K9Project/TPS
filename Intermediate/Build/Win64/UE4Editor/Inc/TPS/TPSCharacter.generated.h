@@ -8,31 +8,45 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UDecalComponent;
+class AWeaponDefault;
 #ifdef TPS_TPSCharacter_generated_h
 #error "TPSCharacter.generated.h already included, missing '#pragma once' in TPSCharacter.h"
 #endif
 #define TPS_TPSCharacter_generated_h
 
-#define TPS_Source_TPS_TPSCharacter_h_13_SPARSE_DATA
-#define TPS_Source_TPS_TPSCharacter_h_13_RPC_WRAPPERS \
+#define TPS_Source_TPS_TPSCharacter_h_21_SPARSE_DATA
+#define TPS_Source_TPS_TPSCharacter_h_21_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetCursorToWorld); \
+	DECLARE_FUNCTION(execInitWeapon); \
+	DECLARE_FUNCTION(execGetCurrentWeapon); \
 	DECLARE_FUNCTION(execChangeMovementState); \
 	DECLARE_FUNCTION(execCharacterUpdate); \
+	DECLARE_FUNCTION(execAttackCharEvent); \
 	DECLARE_FUNCTION(execMovementTick); \
+	DECLARE_FUNCTION(execInputAttackReleased); \
+	DECLARE_FUNCTION(execInputAttackPressed); \
 	DECLARE_FUNCTION(execInputAxisX); \
 	DECLARE_FUNCTION(execInputAxisY);
 
 
-#define TPS_Source_TPS_TPSCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TPS_Source_TPS_TPSCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetCursorToWorld); \
+	DECLARE_FUNCTION(execInitWeapon); \
+	DECLARE_FUNCTION(execGetCurrentWeapon); \
 	DECLARE_FUNCTION(execChangeMovementState); \
 	DECLARE_FUNCTION(execCharacterUpdate); \
+	DECLARE_FUNCTION(execAttackCharEvent); \
 	DECLARE_FUNCTION(execMovementTick); \
+	DECLARE_FUNCTION(execInputAttackReleased); \
+	DECLARE_FUNCTION(execInputAttackPressed); \
 	DECLARE_FUNCTION(execInputAxisX); \
 	DECLARE_FUNCTION(execInputAxisY);
 
 
-#define TPS_Source_TPS_TPSCharacter_h_13_INCLASS_NO_PURE_DECLS \
+#define TPS_Source_TPS_TPSCharacter_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATPSCharacter(); \
 	friend struct Z_Construct_UClass_ATPSCharacter_Statics; \
@@ -41,7 +55,7 @@ public: \
 	DECLARE_SERIALIZER(ATPSCharacter)
 
 
-#define TPS_Source_TPS_TPSCharacter_h_13_INCLASS \
+#define TPS_Source_TPS_TPSCharacter_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesATPSCharacter(); \
 	friend struct Z_Construct_UClass_ATPSCharacter_Statics; \
@@ -50,7 +64,7 @@ public: \
 	DECLARE_SERIALIZER(ATPSCharacter)
 
 
-#define TPS_Source_TPS_TPSCharacter_h_13_STANDARD_CONSTRUCTORS \
+#define TPS_Source_TPS_TPSCharacter_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATPSCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATPSCharacter) \
@@ -63,7 +77,7 @@ private: \
 public:
 
 
-#define TPS_Source_TPS_TPSCharacter_h_13_ENHANCED_CONSTRUCTORS \
+#define TPS_Source_TPS_TPSCharacter_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATPSCharacter(ATPSCharacter&&); \
@@ -74,33 +88,32 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATPSCharacter)
 
 
-#define TPS_Source_TPS_TPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
+#define TPS_Source_TPS_TPSCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__TopDownCameraComponent() { return STRUCT_OFFSET(ATPSCharacter, TopDownCameraComponent); } \
-	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ATPSCharacter, CameraBoom); } \
-	FORCEINLINE static uint32 __PPO__CursorToWorld() { return STRUCT_OFFSET(ATPSCharacter, CursorToWorld); }
+	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ATPSCharacter, CameraBoom); }
 
 
-#define TPS_Source_TPS_TPSCharacter_h_10_PROLOG
-#define TPS_Source_TPS_TPSCharacter_h_13_GENERATED_BODY_LEGACY \
+#define TPS_Source_TPS_TPSCharacter_h_18_PROLOG
+#define TPS_Source_TPS_TPSCharacter_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_TPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_TPSCharacter_h_13_SPARSE_DATA \
-	TPS_Source_TPS_TPSCharacter_h_13_RPC_WRAPPERS \
-	TPS_Source_TPS_TPSCharacter_h_13_INCLASS \
-	TPS_Source_TPS_TPSCharacter_h_13_STANDARD_CONSTRUCTORS \
+	TPS_Source_TPS_TPSCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_TPSCharacter_h_21_SPARSE_DATA \
+	TPS_Source_TPS_TPSCharacter_h_21_RPC_WRAPPERS \
+	TPS_Source_TPS_TPSCharacter_h_21_INCLASS \
+	TPS_Source_TPS_TPSCharacter_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TPS_Source_TPS_TPSCharacter_h_13_GENERATED_BODY \
+#define TPS_Source_TPS_TPSCharacter_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_TPSCharacter_h_13_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_TPSCharacter_h_13_SPARSE_DATA \
-	TPS_Source_TPS_TPSCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	TPS_Source_TPS_TPSCharacter_h_13_INCLASS_NO_PURE_DECLS \
-	TPS_Source_TPS_TPSCharacter_h_13_ENHANCED_CONSTRUCTORS \
+	TPS_Source_TPS_TPSCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_TPSCharacter_h_21_SPARSE_DATA \
+	TPS_Source_TPS_TPSCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	TPS_Source_TPS_TPSCharacter_h_21_INCLASS_NO_PURE_DECLS \
+	TPS_Source_TPS_TPSCharacter_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

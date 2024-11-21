@@ -1,0 +1,25 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TPS-8480.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\ProjectileDefault.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPS.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSCharacter.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSGameMode.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSPlayerController.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Types.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\WeaponDefault.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\ProjectileDefault.gen.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPS.init.gen.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSCharacter.gen.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSGameMode.gen.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSPlayerController.gen.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Types.gen.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\WeaponDefault.gen.cpp.obj"
+"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Default.rc2.res"
+/OUT:"C:\Users\N007va\Documents\Unreal Projects\Practic Works\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\UE4Editor-TPS-8480.lib"

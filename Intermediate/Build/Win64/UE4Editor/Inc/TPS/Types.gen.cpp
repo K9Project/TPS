@@ -15,6 +15,10 @@ void EmptyLinkFunctionForGeneratedCodeTypes() {}
 // Cross Module References
 	TPS_API UEnum* Z_Construct_UEnum_TPS_EMovementState();
 	UPackage* Z_Construct_UPackage__Script_TPS();
+	TPS_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponInfo();
+	TPS_API UScriptStruct* Z_Construct_UScriptStruct_FProjectileInfo();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	TPS_API UClass* Z_Construct_UClass_AProjectileDefault_NoRegister();
 	TPS_API UScriptStruct* Z_Construct_UScriptStruct_FCharacterSpeed();
 	TPS_API UClass* Z_Construct_UClass_UTypes_NoRegister();
 	TPS_API UClass* Z_Construct_UClass_UTypes();
@@ -85,6 +89,210 @@ void EmptyLinkFunctionForGeneratedCodeTypes() {}
 		}
 		return ReturnEnum;
 	}
+class UScriptStruct* FWeaponInfo::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern TPS_API uint32 Get_Z_Construct_UScriptStruct_FWeaponInfo_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FWeaponInfo, Z_Construct_UPackage__Script_TPS(), TEXT("WeaponInfo"), sizeof(FWeaponInfo), Get_Z_Construct_UScriptStruct_FWeaponInfo_Hash());
+	}
+	return Singleton;
+}
+template<> TPS_API UScriptStruct* StaticStruct<FWeaponInfo>()
+{
+	return FWeaponInfo::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FWeaponInfo(FWeaponInfo::StaticStruct, TEXT("/Script/TPS"), TEXT("WeaponInfo"), false, nullptr, nullptr);
+static struct FScriptStruct_TPS_StaticRegisterNativesFWeaponInfo
+{
+	FScriptStruct_TPS_StaticRegisterNativesFWeaponInfo()
+	{
+		UScriptStruct::DeferCppStructOps<FWeaponInfo>(FName(TEXT("WeaponInfo")));
+	}
+} ScriptStruct_TPS_StaticRegisterNativesFWeaponInfo;
+	struct Z_Construct_UScriptStruct_FWeaponInfo_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponDamage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_WeaponDamage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RateOfFire_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RateOfFire;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileSetting_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ProjectileSetting;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponInfo_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FWeaponInfo>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_WeaponDamage_MetaData[] = {
+		{ "Category", "WeaponSetting" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_WeaponDamage = { "WeaponDamage", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponInfo, WeaponDamage), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_WeaponDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_WeaponDamage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_RateOfFire_MetaData[] = {
+		{ "Category", "WeaponSetting" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_RateOfFire = { "RateOfFire", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponInfo, RateOfFire), METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_RateOfFire_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_RateOfFire_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_ProjectileSetting_MetaData[] = {
+		{ "Category", "WeaponSetting" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_ProjectileSetting = { "ProjectileSetting", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FWeaponInfo, ProjectileSetting), Z_Construct_UScriptStruct_FProjectileInfo, METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_ProjectileSetting_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_ProjectileSetting_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FWeaponInfo_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_WeaponDamage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_RateOfFire,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FWeaponInfo_Statics::NewProp_ProjectileSetting,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FWeaponInfo_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_TPS,
+		nullptr,
+		&NewStructOps,
+		"WeaponInfo",
+		sizeof(FWeaponInfo),
+		alignof(FWeaponInfo),
+		Z_Construct_UScriptStruct_FWeaponInfo_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponInfo_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FWeaponInfo_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FWeaponInfo_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FWeaponInfo()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FWeaponInfo_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_TPS();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("WeaponInfo"), sizeof(FWeaponInfo), Get_Z_Construct_UScriptStruct_FWeaponInfo_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FWeaponInfo_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FWeaponInfo_Hash() { return 3705830554U; }
+class UScriptStruct* FProjectileInfo::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern TPS_API uint32 Get_Z_Construct_UScriptStruct_FProjectileInfo_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FProjectileInfo, Z_Construct_UPackage__Script_TPS(), TEXT("ProjectileInfo"), sizeof(FProjectileInfo), Get_Z_Construct_UScriptStruct_FProjectileInfo_Hash());
+	}
+	return Singleton;
+}
+template<> TPS_API UScriptStruct* StaticStruct<FProjectileInfo>()
+{
+	return FProjectileInfo::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FProjectileInfo(FProjectileInfo::StaticStruct, TEXT("/Script/TPS"), TEXT("ProjectileInfo"), false, nullptr, nullptr);
+static struct FScriptStruct_TPS_StaticRegisterNativesFProjectileInfo
+{
+	FScriptStruct_TPS_StaticRegisterNativesFProjectileInfo()
+	{
+		UScriptStruct::DeferCppStructOps<FProjectileInfo>(FName(TEXT("ProjectileInfo")));
+	}
+} ScriptStruct_TPS_StaticRegisterNativesFProjectileInfo;
+	struct Z_Construct_UScriptStruct_FProjectileInfo_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Projectile;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileDamage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ProjectileDamage;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FProjectileInfo_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FProjectileInfo>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_Projectile_MetaData[] = {
+		{ "Category", "ProjectileSetting" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_Projectile = { "Projectile", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FProjectileInfo, Projectile), Z_Construct_UClass_AProjectileDefault_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_Projectile_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_Projectile_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_ProjectileDamage_MetaData[] = {
+		{ "Category", "ProjectileSetting" },
+		{ "ModuleRelativePath", "Types.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_ProjectileDamage = { "ProjectileDamage", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FProjectileInfo, ProjectileDamage), METADATA_PARAMS(Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_ProjectileDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_ProjectileDamage_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FProjectileInfo_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_Projectile,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FProjectileInfo_Statics::NewProp_ProjectileDamage,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FProjectileInfo_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_TPS,
+		nullptr,
+		&NewStructOps,
+		"ProjectileInfo",
+		sizeof(FProjectileInfo),
+		alignof(FProjectileInfo),
+		Z_Construct_UScriptStruct_FProjectileInfo_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FProjectileInfo_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FProjectileInfo_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FProjectileInfo_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FProjectileInfo()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FProjectileInfo_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_TPS();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("ProjectileInfo"), sizeof(FProjectileInfo), Get_Z_Construct_UScriptStruct_FProjectileInfo_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FProjectileInfo_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FProjectileInfo_Hash() { return 119442531U; }
 class UScriptStruct* FCharacterSpeed::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
